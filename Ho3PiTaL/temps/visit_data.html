@@ -1,0 +1,10 @@
+{% extends 'master.html' %}
+
+{% block title %} Visits Data {% endblock %}
+
+{% block my_hospital %}
+    <h1>Doctor : {{ visit_data.doctor }}</h1>
+    <h1>date : {{ visit_data.date }}</h1>
+    <h1>text : {{ visit_data.text }}</h1>
+    <a href="{% url 'visit_delete' visit_data.id %}">Delete</a>
+{% endblock %}
