@@ -50,7 +50,7 @@ class MedicationCategory(models.Model):
         return self.name
 
 class Medication(models.Model):
-    name = models.CharField(max_length = 255, primary_key = True)
+    name = models.CharField(max_length = 255 , null = True , blank = True)
     about = models.TextField()
     how_to_use = models.TextField()
     effects = models.CharField(max_length = 255)
