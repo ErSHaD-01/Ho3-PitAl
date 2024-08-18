@@ -4,28 +4,28 @@
 
 {% block my_hospital %}
     {% if who_is_user == 'Patient' and user_data.is_ok %}
-        <a href="{% url 'edit_profile' %}">Edit Profile</a><br>
-        <a href="{% url 'history' user_data.id %}">History</a><br>
-        <a href="{% url 'visits' user_data.id %}">Visit</a>
+        <a href="{% url 'edit_profile' %}" class="button button-edit">Edit Profile</a><br>
+        <a href="{% url 'history' user_data.id %}" class="button button-link">History</a><br>
+        <a href="{% url 'visits' user_data.id %}" class="button button-link">Visit</a>
     {% endif %}
 
     {% if who_is_user == 'Doctor' %}
-        <a href="{% url 'edit_profile' %}">Edit Profile</a><br>
-        <a href="{% url 'patient' %}">Patients</a><br>
-        <a href="{% url 'show_meds' %}">Meds</a><br>
-        <a href="{% url 'doctor_visit' user_data.id %}">Visit</a><br>
-        <a href="{% url 'show_patient_prescription' user_data.id %}">Prescription</a><br>
-        <a href="{% url 'prescription_history' user_data.id %}">Prescription History</a><br>
-        <a href="{% url 'deps' %}">Departments</a><br>
+        <a href="{% url 'edit_profile' %}" class="button button-edit">Edit Profile</a><br>
+        <a href="{% url 'patient' %}" class="button button-link">Patients</a><br>
+        <a href="{% url 'show_meds' %}" class="button button-link">Meds</a><br>
+        <a href="{% url 'doctor_visit' user_data.id %}" class="button button-link">Visit</a><br>
+        <a href="{% url 'show_patient_prescription' user_data.id %}" class="button button-link">Prescription</a><br>
+        <a href="{% url 'prescription_history' user_data.id %}" class="button button-link">Prescription History</a><br>
+        <a href="{% url 'deps' %}" class="button button-link">Departments</a><br>
     {% endif %}
 
     {% if who_is_user == 'Staff' %}
-        <a href="{% url 'edit_profile' %}">Edit Profile</a><br>
-        <a href="{% url 'patient' %}">Patients</a><br>
-        <a href="{% url 'show_doctors' %}">Doctors</a><br>
-        <a href="{% url 'show_meds' %}">Meds</a><br>
-        <a href="{% url 'show_prescription' %}">Prescriptions</a><br>
-        <a href="{% url 'deps' %}">Departments</a><br>
+        <a href="{% url 'edit_profile' %}" class="button button-edit">Edit Profile</a><br>
+        <a href="{% url 'patient' %}" class="button button-link">Patients</a><br>
+        <a href="{% url 'show_doctors' %}" class="button button-link">Doctors</a><br>
+        <a href="{% url 'show_meds' %}" class="button button-link">Meds</a><br>
+        <a href="{% url 'show_prescription' %}" class="button button-link">Prescriptions</a><br>
+        <a href="{% url 'deps' %}" class="button button-link">Departments</a><br>
     {% endif %}
 
 {% endblock %}

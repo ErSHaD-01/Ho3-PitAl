@@ -10,6 +10,6 @@
     <h1>Text : {{ prescription.text}}</h1>
     <h1>How_to_use : {{ prescription.how_to_use}}</h1>
     <h1>Date : {{ prescription.date}}</h1>
-    <a href="{% url 'prescription_history_detail_edit' prescription.id %}">Edit</a><br>
-    <a href="{% url 'prescription_history_detail_delete' prescription.id %}">Delete</a>
+    <a href="{% url 'prescription_history_detail_edit' prescription.id %}" class="button button-edit">Edit</a><br>
+    <a href="{% url 'prescription_history_detail_delete' prescription.id %}" class="button button-delete">Delete</a>
 {% endblock %}

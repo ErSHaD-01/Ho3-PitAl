@@ -275,7 +275,7 @@ def deps(request):
     dep = models.Department.objects.all()
     return render(request , 'deps.html' , {'dep' : dep})
 
-def deps_detail(request , dep_id):
-    dep = models.Department.objects.get(id = dep_id)
+def deps_detail(request , dep_name):
+    dep = models.Department.objects.get(name = dep_name)
     return render(request , 'deps_detail.html' , {'dep' : dep})
 #<--- enddeps ---># 

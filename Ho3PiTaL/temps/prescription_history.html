@@ -4,6 +4,6 @@
 
 {% block my_hospital %}
     {% for i in prescription %}
-        <a href="{% url 'prescription_history_detail' i.id %}">Prescription : {{ i.id }}</a><br>
+        <a href="{% url 'prescription_history_detail' i.id %}" class="button button-register">Prescription : {{ i.id }}</a><br>
     {% endfor %}
 {% endblock %}

@@ -59,6 +59,6 @@ urlpatterns = [
 
     #<--- deps ---># 
     path('accounts/profile/departments' , views.deps , name = 'deps'),
-    path('accounts/profile/departments/detail/<int:dep_id>/' , views.deps_detail , name = 'deps_detail'),
+    path('accounts/profile/departments/detail/<str:dep_name>/' , views.deps_detail , name = 'deps_detail'),
     #<--- enddeps ---># 
 ]

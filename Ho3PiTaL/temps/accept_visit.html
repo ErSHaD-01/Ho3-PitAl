@@ -5,7 +5,7 @@
 {% block my_hospital %}
     <h1>Patient : {{ visit.patient }}</h1>
     <h1>Text : {{ visit.text }}</h1>
-    <form action="" method="post" novalidate>
+    <form action="" method="post" novalidate class="form-style">
         {% csrf_token %}
         {{ form.as_p }}
         <input type="submit" value="Confirm">
