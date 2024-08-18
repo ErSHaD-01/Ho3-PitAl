@@ -5,9 +5,5 @@
 {% block my_hospital %}
     <a href="{% url 'login' %}" class="button button-login">Login</a><br>
     <a href="{% url 'logout' %}" class="button button-logout">Logout</a><br>
-    <a href="{% url 'register_patient' %}" class="button button-register">Register</a>
-
-    {% for i in doctor %}
-        <h2>{{ i.id }}</h2>
-    {% endfor %}    
+    <a href="{% url 'register_patient' %}" class="button button-register">Register</a>   
 {% endblock %}
