@@ -1,0 +1,13 @@
+{% extends 'master.html' %}
+
+{% block title %} Prescription Detail {% endblock %}
+
+{% block my_hospital %}
+    <h1>Patient : {{ prescription.patient}}</h1>
+    <h1>Department : {{ prescription.department}}</h1>
+    <h1>Disease : {{ prescription.disease}}</h1>
+    <h1>Meds : {{ prescription.meds}}</h1>
+    <h1>Text : {{ prescription.text}}</h1>
+    <h1>How_to_use : {{ prescription.how_to_use}}</h1>
+    <h1>Date : {{ prescription.date}}</h1>
+{% endblock %}

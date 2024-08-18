@@ -35,4 +35,14 @@ class VisitForm(forms.ModelForm):
     class Meta:
         model = models.Visit
         fields = ['doctor' , 'date' , 'text']
-      
+
+class AcceptVisitForm(forms.ModelForm):
+    class Meta:
+        model = models.Visit
+        fields = ['date' , 'is_confirmed']
+
+
+class PrescriptionForm(forms.ModelForm):
+    class Meta:
+        model = models.Prescription
+        fields = ['meds' , 'text' , 'how_to_use' , 'date' , 'disease' , 'department']

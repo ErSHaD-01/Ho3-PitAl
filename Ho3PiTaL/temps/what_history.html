@@ -1,0 +1,8 @@
+{% extends 'master.html' %}
+
+{% block title %} History {% endblock %}
+
+{% block my_hospital %}
+    <a href="{% url 'disease_history' patient.id %}">Disease</a><br>
+    <a href="{% url 'visit_history' patient.id %}">Prescription</a>
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends 'master.html' %}
+
+{% block title %} Visits {% endblock %}
+
+{% block my_hospital %}
+    {% for i in doctor %}
+        <a href="{% url 'doctor_visit_data' i.id %}">Visit : {{ i.id }}</a>
+    {% endfor %}
+{% endblock %}

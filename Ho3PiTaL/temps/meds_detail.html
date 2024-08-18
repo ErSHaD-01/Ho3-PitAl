@@ -1,0 +1,11 @@
+{% extends 'master.html' %}
+
+{% block title %} Meds Detail {% endblock %}
+
+{% block my_hospital %}
+    <h1>Name : {{ meds.name }}</h1> 
+    <h1>About : {{ meds.about }}</h1>
+    <h1>How_to_use : {{ meds.how_to_use }}</h1>
+    <h1>Effects : {{ meds.effects }}</h1>
+    <h1>Med_type : {{ meds.med_type }}</h1>
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends 'master.html' %}
+
+{% block title %} Prescription History {% endblock %}
+
+{% block my_hospital %}
+    {% for i in prescription %}
+        <a href="{% url 'prescription_history_detail' i.id %}">Prescription : {{ i.id }}</a><br>
+    {% endfor %}
+{% endblock %}

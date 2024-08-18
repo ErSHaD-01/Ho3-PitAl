@@ -16,29 +16,27 @@ class Department(models.Model):
         return self.name
 
 class Disease(models.Model):
-    name = models.CharField(max_length = 255, primary_key=True)
+    name = models.CharField(max_length = 255, primary_key = True)
     about = models.TextField()
 
     def __str__(self):
         return self.name
 
 class Patient(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.OneToOneField(User, on_delete = models.CASCADE)
     age = models.IntegerField()
-    national_code = models.IntegerField(unique=True)
-    disease = models.ForeignKey(Disease, on_delete=models.CASCADE, blank=True, null=True) 
-    department = models.ForeignKey(Department, on_delete=models.CASCADE, blank=True, null=True)
-    is_ok = models.BooleanField(default=False)
-
+    national_code = models.IntegerField(unique  = True)
+    is_ok = models.BooleanField(default = False)
+    
     def __str__(self):
         return f"{self.user.first_name} {self.user.last_name}"
 
 class Doctor(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.OneToOneField(User, on_delete = models.CASCADE)
     age = models.IntegerField()
-    national_code = models.IntegerField(unique=True)
+    national_code = models.IntegerField(unique = True)
     number = models.IntegerField()
-    department = models.ForeignKey(Department, on_delete=models.CASCADE)
+    department = models.ForeignKey(Department, on_delete = models.CASCADE)
 
     def __str__(self):
         return f"Dr. {self.user.first_name} {self.user.last_name}"
@@ -64,10 +62,13 @@ class Medication(models.Model):
 class Prescription(models.Model):
     doctor = models.ForeignKey(Doctor, on_delete = models.CASCADE)
     patient = models.ForeignKey(Patient, on_delete = models.CASCADE)
+    department = models.ForeignKey(Department, on_delete=models.CASCADE, blank=True, null=True)
+    disease = models.ForeignKey(Disease, on_delete=models.CASCADE, blank=True, null=True) 
     meds = models.ManyToManyField(Medication, related_name = 'prescriptions')
     text = models.TextField()
     how_to_use = models.TextField()
     date = models.DateTimeField()
+
 
     def __str__(self):
         return f"Prescription for {self.patient} by {self.doctor} on {self.date}"
@@ -78,6 +79,8 @@ class Visit(models.Model):
     date = models.DateTimeField()
     is_confirmed = models.BooleanField(default = False)
     text = models.TextField()
+    prescription_written = models.BooleanField(default = False)
+
 
     def __str__(self):
         return f"Visit on {self.date} by {self.doctor}"

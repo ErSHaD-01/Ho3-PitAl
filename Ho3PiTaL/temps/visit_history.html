@@ -1,0 +1,18 @@
+{% extends 'master.html' %}
+
+{% block title %} Visit History {% endblock %}
+
+{% block my_hospital %}
+    {% for i in visit %}
+        <h1>Disease : {{ i.doctor }}</h1>
+        <h1>Department : {{ i.department }}</h1>
+        <h1>Disease : {{ i.disease }}</h1>
+        {% for j in visit %}
+            <h1>Meds : {{ i.meds }}</h1>
+        {% endfor %}
+        <h1>Text : {{ i.text }}</h1>
+        <h1>How_to_use : {{ i.how_to_use }}</h1>
+        <h1>Date : {{ i.date }}</h1>
+        <br>
+    {% endfor %}
+{% endblock %}

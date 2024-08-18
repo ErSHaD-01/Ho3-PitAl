@@ -4,8 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %} {% endblock %}</title>
+    <style>
+        body {
+            font-family: peyda;
+            background-color: #eaeaea;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            background-color: white;
+            color: #007BFF;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        main {
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            max-width: 800px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #007BFF;
+        }
+
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #005BFF;
+        }
+
+        .form-style {
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 30px;
+            background-color: #f7f7f7;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            font-family: 'Couture', Arial, sans-serif;
+        }
+
+        .form-style input[type="text"],
+        .form-style input[type="password"],
+        .form-style input[type="email"],
+        .form-style textarea,
+        .form-style select {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0 20px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        .form-style button[type="submit"],
+        .form-style input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .form-style button[type="submit"]:hover,
+        .form-style input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .form-style button[type="submit"]:active,
+        .form-style input[type="submit"]:active {
+            background-color: #004494;
+        }
+
+    </style>
+
 </head>
 <body>
-    {% block my_hospital %} {% endblock %}
+    <header>
+        <h1>Ho3PiTaL</h1>
+    </header>
+    <main>
+        {% block my_hospital %} {% endblock %}
+    </main>
 </body>
 </html>

@@ -1,8 +1,11 @@
 {% extends 'master.html' %}
 
-{% block title %} History {% endblock %}
+{% block title %} Disease History {% endblock %}
 
 {% block my_hospital %}
-    <h1>Disease : {{ history.disease }}</h1>
-    <h1>Department : {{ history.department }}</h1>
+    {% for i in disease %}
+        <h1>Disease : {{ i.disease }}</h1>
+        <h1>Department : {{ i.department }}</h1>
+        <br>
+    {% endfor %}
 {% endblock %}

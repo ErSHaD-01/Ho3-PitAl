@@ -1,0 +1,12 @@
+{% extends 'master.html' %}
+
+{% block title %} Departments Detail {% endblock %}
+
+{% block my_hospital %}
+    <h1>Name : {{ dep.name }}</h1>
+    <h1>About : {{ dep.about }}</h1>
+    <h1>Duty : {{ dep.duty }}</h1>
+    <h1>Rooms : {{ dep.rooms }}</h1>
+    <h1>Meterage : {{ dep.meterage }}</h1>
+    <h1>Staff_numbers : {{ dep.staff_numbers }}</h1>
+{% endblock %}

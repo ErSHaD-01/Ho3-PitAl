@@ -3,7 +3,7 @@
 {% block title %} Create Visit {% endblock %}
 
 {% block my_hospital %}
-    <form action="" method="post">
+    <form action="" method="post" class="form-style">
         {% csrf_token %}
         {{ form.as_p }}
         <input type="submit" value="Confirm">

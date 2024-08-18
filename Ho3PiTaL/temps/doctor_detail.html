@@ -1,0 +1,11 @@
+{% extends 'master.html' %}
+
+{% block title %} Doctors Detail {% endblock %}
+
+{% block my_hospital %}
+    <h1>User : {{ doctor.user }}</h1> 
+    <h1>Age : {{ doctor.age }}</h1>
+    <h1>National_code : {{ doctor.national_code }}</h1>
+    <h1>Department : {{ doctor.department }}</h1>
+    <h1>Number : {{ doctor.number }}</h1>
+{% endblock %}

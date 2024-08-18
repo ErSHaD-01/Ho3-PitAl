@@ -1,11 +1,14 @@
 {% extends 'master.html' %}
 
-{% block title %} Edit Profile {% endblock %}
+{% block title %} Accept Visit {% endblock %}
 
 {% block my_hospital %}
-    <form action="" method="post" novalidate class="form-style">
+    <h1>Patient : {{ visit.patient }}</h1>
+    <h1>Text : {{ visit.text }}</h1>
+    <form action="" method="post" novalidate>
         {% csrf_token %}
         {{ form.as_p }}
         <input type="submit" value="Confirm">
     </form>
 {% endblock %}
+
